@@ -1,28 +1,5 @@
 // Settings
 export const TERM_AND_CONDITIONS = 'TERM_AND_CONDITIONS';
-export const SETTING_LANGUAGE = 'SETTING_LANGUAGE';
-export const SETTING_SOUND = 'SETTING_SOUND';
-export const PAID_USER = 'PAID_USER';
-export const DOWNLOAD_STATUS = 'DOWNLOAD_STATUS';
-// IAP
-export const SUbSCRIPTION_RECEIPT_SET = 'SUbSCRIPTION_RECEIPT_SET';
 
-// Lobby
-export const RESET_LOBBY = 'RESET_LOBBY';
-export const SET_LOBBY = 'SET_LOBBY';
-
-// Players
-export const SET_PLAYERS = 'SET_PLAYERS';
-
-// GLOBAL
-export const RESET_GLOBAL = 'RESET_GLOBAL';
-export const SET_GLOBAL = 'SET_GLOBAL';
-export const APP_STATE = 'APP_STATE';
-
-// game
-export const GET_GAME_IMAGE_DATA = 'GET_GAME_IMAGE_DATA';
-export const GAME_SELECTION = 'GAME_SELECTION';
-export const GET_GAME_DATA = 'GET_GAME_DATA';
-export const UNLOCK_GAME = 'UNLOCK_GAME';
-export const GET_JINXED_DATA = 'GET_JINXED_DATA';
-export const SUBSCRIPTION_EXPIRE = 'SUBSCRIPTION_EXPIRE';
+// Books
+export const GET_BOOKS = 'GET_BOOKS';
