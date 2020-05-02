@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "902721550748",
+    "firebase_url": "https://booksmart-bc773.firebaseio.com",
+    "project_id": "booksmart-bc773",
+    "storage_bucket": "booksmart-bc773.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902721550748:android:7c9a616cad92081482b059",
+        "android_client_info": {
+          "package_name": "com.books1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902721550748-7b7fsi5c0d0dvfv2qsab43h4lggdnetr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxRB_5YoczHgX1XOKaYgyQ7aMO_VK1Ta0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902721550748-7b7fsi5c0d0dvfv2qsab43h4lggdnetr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
