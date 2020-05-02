@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef, useLayoutEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {TransitionPresets, createStackNavigator} from '@react-navigation/stack';
 import {connect} from 'react-redux';
-// import {setAppState} from '@Actions';
+import {getAllBooks} from '@Actions';
 // import NetInfo from '@react-native-community/netinfo';
 // import * as CONSTANTS from '@Constants';
 import {View} from 'react-native';
@@ -15,6 +15,14 @@ import configureStore from './store/configureStore';
 import {PersistGate} from 'redux-persist/integration/react';
 
 const BaseAppState = props => {
+  const firstUpdate = useRef(true);
+  useLayoutEffect(() => {
+    if (firstUpdate.current) {
+      props.onGetAllBooks();
+      firstUpdate.current = false;
+      return;
+    }
+  });
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -51,7 +59,11 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return {};
+  return {
+    onGetAllBooks: () => {
+      dispatch(getAllBooks());
+    },
+  };
 };
 const BaseApp = connect(
   mapStateToProps,
