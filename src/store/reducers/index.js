@@ -4,5 +4,5 @@ import BooksReducers from './book';
 
 export default combineReducers({
   setting: settingReducers,
-  Books: BooksReducers,
+  books: BooksReducers,
 });

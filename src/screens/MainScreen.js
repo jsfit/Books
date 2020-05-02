@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
+import {getAllBooks} from '@Actions';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,7 +17,8 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-const MainScreen = () => {
+const MainScreen = props => {
+  console.log(props.books);
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -61,6 +65,19 @@ const MainScreen = () => {
     </>
   );
 };
+const mapStateToProps = state => {
+  return {
+    books: state.books,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onGetAllBooks: () => {
+      dispatch(getAllBooks());
+    },
+  };
+};
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -100,4 +117,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-export default MainScreen;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MainScreen);
