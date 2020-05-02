@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import {getAllBooks} from '@Actions';
-
+import {BooksCarousel} from '@Components';
 import {
   SafeAreaView,
   StyleSheet,
@@ -20,49 +20,36 @@ import {
 const MainScreen = props => {
   console.log(props.books);
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <BooksCarousel
+      carouselItems={[
+        {
+          title: 'Item 1',
+          description: 'Text 1',
+        },
+        {
+          title: 'Item 2',
+          description: 'Text 2',
+        },
+        {
+          title: 'Item 3',
+          description: 'Text 3',
+        },
+        {
+          title: 'Item 4',
+          description: 'Text 4',
+        },
+        {
+          title: 'Item 5',
+          description: 'Text 5',
+        },
+      ]} //props.books}
+    />
+    // <>
+    //   <StatusBar barStyle="dark-content" />
+    //   <SafeAreaView>
+    //     <BooksCarousel />
+    //   </SafeAreaView>
+    // </>
   );
 };
 const mapStateToProps = state => {
