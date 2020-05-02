@@ -7,7 +7,7 @@ export const getAllBooks = () => {
       .collection('books')
       .get()
       .then(querySnapshot => {
-        console.log('Total books: ', querySnapshot);
+        // console.log('Total books: ', querySnapshot);
         let data = [];
         querySnapshot.forEach(documentSnapshot => {
           data.push(documentSnapshot.data());
