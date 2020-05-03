@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {getAllBooks} from '@Actions';
 // import NetInfo from '@react-native-community/netinfo';
 // import * as CONSTANTS from '@Constants';
-import {View} from 'react-native';
+import {View, StatusBar} from 'react-native';
 import {MainScreen} from './screens';
 import {TabScreen} from './screens';
 
@@ -14,6 +14,7 @@ const Stack = createStackNavigator();
 import {Provider} from 'react-redux';
 import configureStore from './store/configureStore';
 import {PersistGate} from 'redux-persist/integration/react';
+StatusBar.setHidden(true);
 
 const BaseAppState = props => {
   const firstUpdate = useRef(true);

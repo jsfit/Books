@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Header, Text, Tab, Tabs } from 'native-base';
+import React, {Component} from 'react';
+import {Container, Header, Text, Tab, Tabs} from 'native-base';
 // import Tab1 from './tabOne';
 // import Tab2 from './tabTwo';
 // import Tab3 from './tabThree';
@@ -7,7 +7,7 @@ export default class TabScreen extends Component {
   render() {
     return (
       <Container>
-        <Header hasTabs />
+        {/* <Header hasTabs /> */}
         <Tabs>
           <Tab heading="Tab1">
             <Text>Thasdsad</Text>
