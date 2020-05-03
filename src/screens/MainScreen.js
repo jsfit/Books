@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {connect} from 'react-redux';
-import {getAllBooks} from '@Actions';
-import {BooksCarousel} from '@Components';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getAllBooks } from '@Actions';
+import { BooksCarousel } from '@Components';
 import {
   SafeAreaView,
   StyleSheet,
@@ -20,30 +20,17 @@ import {
 const MainScreen = props => {
   console.log(props.books);
   return (
+
+    <>
+
     <BooksCarousel
-      carouselItems={[
-        {
-          title: 'Item 1',
-          description: 'Text 1',
-        },
-        {
-          title: 'Item 2',
-          description: 'Text 2',
-        },
-        {
-          title: 'Item 3',
-          description: 'Text 3',
-        },
-        {
-          title: 'Item 4',
-          description: 'Text 4',
-        },
-        {
-          title: 'Item 5',
-          description: 'Text 5',
-        },
-      ]} //props.books}
+      carouselItems={props.books}
     />
+
+    <View>
+      <Text>Huzam</Text>
+    </View>
+    </>
     // <>
     //   <StatusBar barStyle="dark-content" />
     //   <SafeAreaView>
