@@ -20,19 +20,17 @@ import {
 const MainScreen = props => {
   console.log(props.books);
   return (
-    <>
-      <BooksCarousel carouselItems={props.books} />
-
-      <View>
-        <Text>Huzam</Text>
-      </View>
-    </>
-    // <>
-    //   <StatusBar barStyle="dark-content" />
-    //   <SafeAreaView>
-    //     <BooksCarousel />
-    //   </SafeAreaView>
-    // </>
+    // <SafeAreaView style={{flex: 1}}>
+    <View
+      style={{
+        flex: 1,
+        alignItems: 'flex-end',
+        flexDirection: 'column-reverse',
+      }}>
+      {/* <View> */}
+      <BooksCarousel />
+      {/* </View> */}
+    </View>
   );
 };
 const mapStateToProps = state => {

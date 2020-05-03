@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import {Container, Header, Text, Tab, Tabs} from 'native-base';
-import {PDFOpen} from '@Components';
-import {CardComponent} from '@Components';
-import { BooksCarousel } from '@Components';
-
+import {BooksCarousel, CardComponent, PDFOpen} from '@Components';
 
 export default class TabScreen extends Component {
-
   render() {
     return (
       <Container>
@@ -14,7 +10,7 @@ export default class TabScreen extends Component {
         <Tabs>
           <Tab heading="Tab1">
             {/* <Text>Thasdsad</Text> */}
-            <CardComponent/>
+            <CardComponent />
           </Tab>
           <Tab heading="Tab2">
             {/* <Tab2 /> */}
@@ -23,7 +19,7 @@ export default class TabScreen extends Component {
           </Tab>
           <Tab heading="Tab3">
             {/* <Tab3 /> */}
-            <BooksCarousel/>
+            <BooksCarousel />
           </Tab>
         </Tabs>
       </Container>

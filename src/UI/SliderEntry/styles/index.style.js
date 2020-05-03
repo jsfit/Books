@@ -53,7 +53,9 @@ export default StyleSheet.create({
   },
   slider: {
     marginTop: 15,
+    // backgroundColor: 'red',
     overflow: 'visible', // for custom animations
+    position: 'absolute',
   },
   sliderContentContainer: {
     paddingVertical: 10, // for custom animation
