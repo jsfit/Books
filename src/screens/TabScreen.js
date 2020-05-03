@@ -4,6 +4,9 @@ import {Container, Header, Text, Tab, Tabs} from 'native-base';
 // import Tab2 from './tabTwo';
 // import Tab3 from './tabThree';
 import {PDFOpen} from '@Components';
+import {CardComponent} from '@Components';
+
+
 export default class TabScreen extends Component {
   render() {
     return (
@@ -11,7 +14,8 @@ export default class TabScreen extends Component {
         {/* <Header hasTabs /> */}
         <Tabs>
           <Tab heading="Tab1">
-            <Text>Thasdsad</Text>
+            {/* <Text>Thasdsad</Text> */}
+            <CardComponent/>
           </Tab>
           <Tab heading="Tab2">
             {/* <Tab2 /> */}
