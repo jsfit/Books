@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
+import { Container, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
 
 
 export default class CardComponent extends Component {
   render() {
     return (
-      <Container>
-        <Header />
+      <Container style={{ width: 340, paddingTop: 150, paddingLeft: 30  }}>
         <Content>
           <Card style={{flex: 0 }}>
             <CardItem>
@@ -21,7 +20,7 @@ export default class CardComponent extends Component {
             </CardItem>
             <CardItem>
               <Body>
-                <Image source={require('../assets/images/main.png')} style={{height: 200, width: 330, flex: 1}}/>
+                <Image source={require('../assets/images/main.png')} style={{height: 200, width: 280, flex: 1}}/>
                 <Text style={{ paddingTop: 20 }}>
                   Sultan Salahudeen Ayubi.
                   1137 - 1193.
