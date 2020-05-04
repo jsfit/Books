@@ -3,12 +3,12 @@ import {Image} from 'react-native';
 import {
   Container,
   Content,
-  Card,
+  Right,
   CardItem,
-  Thumbnail,
+  ListItem,
   Text,
   Button,
-  Icon,
+  View,
   Left,
   Body,
 } from 'native-base';
@@ -16,40 +16,62 @@ import {
 export default class CardComponent extends Component {
   render() {
     return (
-      <Container style={{width: 340, paddingTop: 150, paddingLeft: 30}}>
+      <Container style={{ backgroundColor: "#030303" }}>
         <Content>
-          <Card style={{flex: 0}}>
-            <CardItem>
-              <Left>
-                <Thumbnail source={require('../assets/images/dp.jpg')} />
-                <Body>
-                  <Text>NativeBase</Text>
-                  <Text note>April 15, 2016</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem>
               <Body>
                 <Image
-                  source={require('../assets/images/main.png')}
-                  style={{height: 200, width: 280, flex: 1}}
+                  source={require('../assets/images/ertugral.jpg')}
+                  style={{ borderRadius: 8, maxWidth: 400, maxHeight: 500   }}
                 />
-                <Text style={{paddingTop: 20}}>
+                <Text style={{ position: "absolute", paddingRight: 120, bottom: 100, color: "white", fontSize: 32, fontWeight: "normal"  }}>
+                  {/* Sultan Salahudeen Ayubi */}
+                  Drillis Ertugral
+                </Text>
+                <Text style={{ position: "absolute", paddingLeft: 30, paddingRight: 20, top: 410, color: "white", fontSize: 16, fontWeight: "bold"  }}>
                   Sultan Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF. This book
-                  tell us the true worior of islam.
+                  tell us the true worior of islam. Kindly read this book and enjoy it.
+                  Sultan Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF.
                 </Text>
               </Body>
-            </CardItem>
-            <CardItem>
+              <CardItem style={{ bottom: -20, backgroundColor: "Transparent" }}>
               <Left>
-                <Button transparent textStyle={{color: '#87838B'}}>
-                  <Icon name="logo-github" />
-                  <Text>1,926 stars</Text>
-                </Button>
+                <Text style={{ fontWeight: "bold", fontSize: 20, color: "white" }}>
+                  Aslam Rahi
+                </Text>
               </Left>
+              <Body>
+                <Text style={{ fontWeight: "bold", fontSize: 20, color: "white" }}>
+                  11-02-1998
+                </Text>
+              </Body>
+              <Right>
+                <Text style={{ fontWeight: "bold", fontSize: 20, color: "white" }}>
+                  34
+                </Text>
+              </Right>
             </CardItem>
-          </Card>
+            <CardItem style={{ backgroundColor: "Transparent", top: 10 }}>
+              <Left>
+                <Text style={{ fontSize: 10, color: "white" }}>
+                  Author
+                </Text>
+              </Left>
+              <Body>
+                <Text style={{ fontSize: 10, color: "white" }}>
+                  Publish Date
+                </Text>
+              </Body>
+              <Right>
+                <Text style={{ fontSize: 10, color: "white" }}>
+                  Total Volumes
+                </Text>
+              </Right>
+            </CardItem>
+            
         </Content>
+        <Button block danger style={{ width: 300, bottom: 50, left: 30 }}>
+          <Text>Danger</Text>
+        </Button>
       </Container>
     );
   }
