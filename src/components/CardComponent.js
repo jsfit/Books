@@ -70,7 +70,7 @@ export default class CardComponent extends Component {
             
         </Content>
         <Button block danger style={{ width: 300, bottom: 50, left: 30 }}>
-          <Text>Danger</Text>
+          <Text>Read Book</Text>
         </Button>
       </Container>
     );
