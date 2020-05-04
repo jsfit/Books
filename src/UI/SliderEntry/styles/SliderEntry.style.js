@@ -1,6 +1,6 @@
 import {StyleSheet, Platform} from 'react-native';
 import {colors} from './index.style';
-import {wp, hp} from '@UI';
+import {wp, hp} from '@UI/percentage';
 const IS_IOS = Platform.OS === 'ios';
 
 const slideHeight = hp(70);

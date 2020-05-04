@@ -15,4 +15,3 @@ export const hp = heightPercent => {
       : parseFloat(heightPercent);
   return PixelRatio.roundToNearestPixel((height * elemHeight) / 100);
 };
-
