@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Button, Icon} from 'react-native';
 import PropTypes from 'prop-types';
 import {ParallaxImage} from 'react-native-snap-carousel';
 import styles from '../styles/SliderEntry.style';
@@ -55,6 +55,7 @@ export default class SliderEntry extends Component {
     );
 
     return (
+      <View>
       <TouchableOpacity
         activeOpacity={1}
         style={styles.slideInnerContainer}
@@ -82,6 +83,7 @@ export default class SliderEntry extends Component {
           </Text>
         </View>
       </TouchableOpacity>
+       </View>
     );
   }
 }
