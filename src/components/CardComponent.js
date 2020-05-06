@@ -1,16 +1,11 @@
 import React, {Component} from 'react';
-import {ImageBackground, StyleSheet} from 'react-native';
+import {ImageBackground, StyleSheet, ScrollView} from 'react-native';
 import {
   Container,
-  Content,
   Header,
   Text,
   Button,
   View,
-  CardItem,
-  Body,
-  Right,
-  Left
 } from 'native-base';
 import {hp, wp} from '@UI/percentage';
 
@@ -21,23 +16,34 @@ export default class CardComponent extends Component {
         style={{
           backgroundColor: '#2c3e50',
         }}>
-        <Header 
-        style={{
-          backgroundColor: "#2c3e50"
-        }}>
-          <Text 
-            style={{ 
-              color: "white", 
-              fontSize: wp(7), 
-              padding: wp(3), 
-              fontWeight: "bold"
+        <Header
+          style={{
+            backgroundColor: '#2c3e50',
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: wp(6),
+              padding: wp(2),
+              fontWeight: 'bold',
             }}>
             Sultan Salahudeen Ayubi
           </Text>
         </Header>
         <ImageBackground
           source={require('../assets/images/ertugral.jpg')}
-          style={{width: wp(100), height: hp(60)}}>
+          style={{
+            width: wp(100),
+            height: hp(60),
+          }}>
+          <View
+            style={{
+              height: '100%',
+              width: '100%',
+              backgroundColor: 'black',
+              opacity: 0.5,
+            }}
+          />
           <View
             style={{
               position: 'absolute',
@@ -47,9 +53,7 @@ export default class CardComponent extends Component {
               padding: wp(8),
             }}>
             <Button block style={styles.readBookBt}>
-              <Text>
-                Read Book
-              </Text>
+              <Text>Read Book</Text>
             </Button>
             <Text
               style={{
@@ -59,110 +63,101 @@ export default class CardComponent extends Component {
               }}>
               Sultan Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF. This book tell
               us the true worior of islam. Kindly read this book and enjoy it.
-              Sultan Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF.
-              Sultan Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF.
+              Sultan Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF. Sultan
+              Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF.
             </Text>
-        
           </View>
         </ImageBackground>
-        <Content style={{ padding: wp(5)}}>
-          <CardItem style={{ backgroundColor: "#34495e", borderRadius: 20}}>
-              <Body>
-                <Text style={{ 
-                  color: "white",
-                  fontSize: wp(5),
-                  paddingTop: wp(5)
-                  }}>
-                  Author 
-                </Text>
-                <Text style={{ 
-                  color: "white",
-                  fontSize: wp(5),
-                  paddingTop: wp(5)
-                  }}>
-                  Total Volume
-                </Text>
-                <Text style={{ 
-                  color: "white",
-                  fontSize: wp(5),
-                  paddingTop: wp(5)
-                }}>
-                  Publisher
-                </Text>
-                <Text style={{ 
-                  color: "white",
-                  fontSize: wp(5),
-                  paddingTop: wp(5)
-                }}>
-                  Other
-                </Text>
-              </Body>
-              <Body style={{ paddingLeft: wp(20)}}>
-                <Text style={{ 
-                  color: "white",
-                  fontSize: wp(5),
-                  paddingTop: wp(5)
-                  }}>
-                  Aslam Rahi
-                </Text>
-                <Text style={{ 
-                  color: "white",
-                  fontSize: wp(5),
-                  paddingTop: wp(5)
-                  }}>
-                  5
-                </Text>
-                <Text style={{ 
-                  color: "white",
-                  fontSize: wp(5),
-                  paddingTop: wp(5)
-                }}>
-                  11-09-1998
-                </Text>
-                <Text style={{ 
-                  color: "white",
-                  fontSize: wp(5),
-                  paddingTop: wp(5)
-                }}>
-                  Other
-                </Text>
-              </Body>
-          </CardItem>
-        </Content>
+        <ScrollView style={styles.scrollView}>
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                width: '55%',
+                color: 'white',
+                fontSize: wp(5),
+                padding: wp(6),
+              }}>
+              {'Author'}
+            </Text>
+            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
+              {'Aslam Rahi'}
+            </Text>
+          </View>
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                width: '55%',
+                color: 'white',
+                fontSize: wp(5),
+                padding: wp(6),
+              }}>
+              {'Total Volumes'}
+            </Text>
+            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
+              {'5'}
+            </Text>
+          </View>
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                width: '55%',
+                color: 'white',
+                fontSize: wp(5),
+                padding: wp(6),
+              }}>
+              {'Publisher'}
+            </Text>
+            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
+              {'11-09-1998'}
+            </Text>
+          </View>
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                width: '55%',
+                color: 'white',
+                fontSize: wp(5),
+                padding: wp(6),
+              }}>
+              {'Others'}
+            </Text>
+            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
+              {'AnyThing'}
+            </Text>
+          </View>
+        </ScrollView>
       </Container>
     );
   }
 }
 const styles = StyleSheet.create({
-  table: {
-    flexDirection: 'row',
-    paddingVertical: hp(1),
-    justifyContent: 'space-evenly',
-  },
-  tableWrapper: {
-    flexDirection: 'column',
-    flex: 1,
-    justifyContent: 'space-between',
-  },
-  titleWrapper: {
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  title1: {
-    fontSize: wp(5),
-    color: 'white',
-  },
-  title2: {
-    fontSize: wp(3),
-    color: 'white',
-  },
   readBookBt: {
-    backgroundColor: "#2980b9",
+    backgroundColor: '#34495e',
     width: wp(40),
     alignSelf: 'center',
-    bottom: wp(5)
+    bottom: wp(5),
+  },
+  scrollView: {
+    backgroundColor: '#34495e',
+    marginVertical: 20,
+    borderRadius: 20,
+    left: wp(5),
+    width: wp(90),
   },
 });
-
-
-
