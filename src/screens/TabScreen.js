@@ -6,7 +6,7 @@ export default class TabScreen extends Component {
   render() {
     return (
       <Container>
-        <CardComponent />
+        <WritterBooks />
       </Container>
       // <Container>
       //   <Header style={{backgroundColor: "#2c3e50"}}>
