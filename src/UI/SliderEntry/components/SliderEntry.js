@@ -14,7 +14,7 @@ export default class SliderEntry extends Component {
 
   get image() {
     const {
-      data: {illustration},
+      data: {thumbnail: illustration},
       parallax,
       parallaxProps,
       even,
@@ -40,7 +40,7 @@ export default class SliderEntry extends Component {
 
   render() {
     const {
-      data: {title, subtitle},
+      data: {title, description: subtitle},
       even,
     } = this.props;
 
@@ -56,34 +56,35 @@ export default class SliderEntry extends Component {
 
     return (
       <View>
-      <TouchableOpacity
-        activeOpacity={1}
-        style={styles.slideInnerContainer}
-        onPress={() => {
-          alert(`You've clicked '${title}'`);
-        }}>
-        <View style={styles.shadow} />
-        <View
-          style={[
-            styles.imageContainer,
-            even ? styles.imageContainerEven : {},
-          ]}>
-          {this.image}
+        <TouchableOpacity
+          activeOpacity={1}
+          style={styles.slideInnerContainer}
+          onPress={this.props.onPress}>
+          <View style={styles.shadow} />
           <View
-            style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]}
-          />
-        </View>
-        <View
-          style={[styles.textContainer, even ? styles.textContainerEven : {}]}>
-          {uppercaseTitle}
-          <Text
-            style={[styles.subtitle, even ? styles.subtitleEven : {}]}
-            numberOfLines={2}>
-            {subtitle}
-          </Text>
-        </View>
-      </TouchableOpacity>
-       </View>
+            style={[
+              styles.imageContainer,
+              even ? styles.imageContainerEven : {},
+            ]}>
+            {this.image}
+            <View
+              style={[styles.radiusMask, even ? styles.radiusMaskEven : {}]}
+            />
+          </View>
+          <View
+            style={[
+              styles.textContainer,
+              even ? styles.textContainerEven : {},
+            ]}>
+            {uppercaseTitle}
+            <Text
+              style={[styles.subtitle, even ? styles.subtitleEven : {}]}
+              numberOfLines={2}>
+              {subtitle}
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     );
   }
 }

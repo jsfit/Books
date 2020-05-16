@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {hp, wp} from '@UI/percentage';
 
 export const colors = {
   black: '#1a1917',
@@ -23,7 +24,7 @@ export default StyleSheet.create({
     flex: 1,
   },
   exampleContainer: {
-    paddingVertical: 30,
+    paddingVertical: hp(4),
   },
   exampleContainerDark: {
     backgroundColor: colors.black,
@@ -32,10 +33,10 @@ export default StyleSheet.create({
     backgroundColor: 'white',
   },
   title: {
-    paddingHorizontal: 30,
+    paddingHorizontal: wp(6),
     backgroundColor: 'transparent',
     color: 'rgba(255, 255, 255, 0.9)',
-    fontSize: 20,
+    fontSize: wp(5),
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -47,12 +48,12 @@ export default StyleSheet.create({
     paddingHorizontal: 30,
     backgroundColor: 'transparent',
     color: 'rgba(255, 255, 255, 0.75)',
-    fontSize: 13,
+    fontSize: wp(3.5),
     fontStyle: 'italic',
     textAlign: 'center',
   },
   slider: {
-    marginTop: 15,
+    marginTop: hp(10),
     // backgroundColor: 'red',
     overflow: 'visible', // for custom animations
     position: 'absolute',

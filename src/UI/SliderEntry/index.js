@@ -10,11 +10,13 @@ const SLIDER_1_FIRST_ITEM = 1;
 export default class SliderEntryComponent extends Component {
   constructor(props) {
     super(props);
+    this._renderItemWithParallax = this._renderItemWithParallax.bind(this);
   }
 
   _renderItemWithParallax({item, index}, parallaxProps) {
     return (
       <SliderEntry
+        onPress={() => this.props.onPress(item)}
         data={item}
         even={(index + 1) % 2 === 0}
         parallax={true}

@@ -3,7 +3,7 @@ import {colors} from './index.style';
 import {wp, hp} from '@UI/percentage';
 const IS_IOS = Platform.OS === 'ios';
 
-const slideHeight = hp(70);
+const slideHeight = hp(80);
 const slideWidth = wp(75);
 const itemHorizontalMargin = wp(2);
 
