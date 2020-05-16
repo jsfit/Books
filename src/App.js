@@ -48,9 +48,7 @@ const BaseAppState = props => {
           }),
         }}
         headerMode="true">
-        {/* <Stack.Screen name="MainScreen" component={MainScreen} /> */}
-
-        {/* how i can run twi screens at a same time ..  yaha ma MainScreen or TabScreen dono ko akhata chalana chaata hon... zara yah commit kar dena */}
+        <Stack.Screen name="MainScreen" component={MainScreen} />
         <Stack.Screen name="TabScreen" component={TabScreen} />
       </Stack.Navigator>
     </NavigationContainer>
