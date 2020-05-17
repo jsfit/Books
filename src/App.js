@@ -8,6 +8,7 @@ import {getAllBooks} from '@Actions';
 import {View, StatusBar} from 'react-native';
 import {MainScreen} from './screens';
 import {TabScreen} from './screens';
+import {BookDetailScreen} from './screens';
 
 const Stack = createStackNavigator();
 
@@ -48,6 +49,7 @@ const BaseAppState = props => {
           }),
         }}
         headerMode="true">
+        <Stack.Screen name="BookDetailScreen" component={BookDetailScreen} />
         <Stack.Screen name="MainScreen" component={MainScreen} />
         <Stack.Screen name="TabScreen" component={TabScreen} />
       </Stack.Navigator>
