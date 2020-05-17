@@ -10,7 +10,7 @@ export default class BooksCarousel extends React.Component {
   }
 
   render() {
-    return <SliderEntry/>;
-    // return <SliderEntry data={this.props.books} onPress={this.props.onPress} />;
+    console.log(this.props.books)
+    return <SliderEntry data={this.props.books} onPress={this.props.onPress} />;
   }
 }

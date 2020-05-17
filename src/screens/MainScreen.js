@@ -18,6 +18,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 const MainScreen = props => {
+  console.log(props)
   return (
     // <SafeAreaView style={{flex: 1}}>
     <View
@@ -25,9 +26,9 @@ const MainScreen = props => {
         flex: 1,
         backgroundColor: '#2c3e50',
       }}>
-      {/* <View> */}
-      <BooksCarousel books={props.books} onPress={item => console.log(item)} />
-      {/* </View> */}
+      <View>
+      <BooksCarousel books={props.books} onPress={()=> props.navigation.navigate('BookDetailScreen', {item: props.books})} />
+      </View>
     </View>
   );
 };

@@ -3,11 +3,20 @@ import { Container, Header, Tab, Tabs, TabHeading, Icon, Text, Button } from 'na
 import { BooksCarousel, CardComponent, PDFOpen, WritterBooks } from '@Components';
 
 export default class BookDetailScreen extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeIndex: 0,
+    };
+  }
+  
   render() {
+    console.log(this.props.route.params.item[0])
     return (
       <Container>
-        <Text onPress={() => this.props.navigation.navigate('TabScreen')}>Huzam</Text>
-      </Container>  
+        <CardComponent data={this.props.route.params}/>
+      </Container>
     );
   }
 }

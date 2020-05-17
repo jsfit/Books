@@ -10,8 +10,19 @@ import {
 import {hp, wp} from '@UI/percentage';
 
 export default class CardComponent extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeIndex: 0,
+    };
+    console.log(props)
+  }
+
+    
   render() {
     return (
+      
       <Container
         style={{
           backgroundColor: '#2c3e50',
@@ -84,7 +95,7 @@ export default class CardComponent extends Component {
               {'Author'}
             </Text>
             <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
-              {'Aslam Rahi'}
+            {this.props.data.item[0].author}
             </Text>
           </View>
           <View

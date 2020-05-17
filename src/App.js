@@ -49,9 +49,9 @@ const BaseAppState = props => {
           }),
         }}
         headerMode="true">
-        <Stack.Screen name="BookDetailScreen" component={BookDetailScreen} />
         <Stack.Screen name="MainScreen" component={MainScreen} />
         <Stack.Screen name="TabScreen" component={TabScreen} />
+        <Stack.Screen name="BookDetailScreen" component={BookDetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
