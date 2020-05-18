@@ -1,28 +1,22 @@
 import React, {Component} from 'react';
 import {ImageBackground, StyleSheet, ScrollView} from 'react-native';
-import {
-  Container,
-  Header,
-  Text,
-  Button,
-  View,
-} from 'native-base';
+import {Container, Header, Text, Button, View} from 'native-base';
 import {hp, wp} from '@UI/percentage';
 
 export default class CardComponent extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       activeIndex: 0,
+      bookDetail: props.data.item,
     };
-    console.log(props)
+    console.log(props);
   }
 
-    
   render() {
+    const {bookDetail} = this.state;
+    let ImageUrl = {uri: bookDetail.thumbnail};
     return (
-      
       <Container
         style={{
           backgroundColor: '#2c3e50',
@@ -38,11 +32,11 @@ export default class CardComponent extends Component {
               padding: wp(2),
               fontWeight: 'bold',
             }}>
-            Sultan Salahudeen Ayubi
+            {bookDetail.author}
           </Text>
         </Header>
         <ImageBackground
-          source={require('../assets/images/ertugral.jpg')}
+          source={ImageUrl}
           style={{
             width: wp(100),
             height: hp(60),
@@ -72,10 +66,7 @@ export default class CardComponent extends Component {
                 fontSize: wp(4),
                 fontWeight: 'bold',
               }}>
-              Sultan Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF. This book tell
-              us the true worior of islam. Kindly read this book and enjoy it.
-              Sultan Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF. Sultan
-              Salahudeen Ayubi. 1137 - 1193. 5 Volume PDF.
+              {bookDetail.description}
             </Text>
           </View>
         </ImageBackground>
@@ -95,7 +86,7 @@ export default class CardComponent extends Component {
               {'Author'}
             </Text>
             <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
-            {this.props.data.item[0].author}
+              {bookDetail.author}
             </Text>
           </View>
           <View
@@ -113,7 +104,7 @@ export default class CardComponent extends Component {
               {'Total Volumes'}
             </Text>
             <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
-              {'5'}
+              {bookDetail.totalVolumes}
             </Text>
           </View>
           <View
@@ -131,7 +122,7 @@ export default class CardComponent extends Component {
               {'Publisher'}
             </Text>
             <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
-              {'11-09-1998'}
+              {bookDetail.publishedAt}
             </Text>
           </View>
           <View

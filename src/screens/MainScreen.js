@@ -1,33 +1,24 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {getAllBooks} from '@Actions';
 import {BooksCarousel} from '@Components';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {StyleSheet, View} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 const MainScreen = props => {
-  console.log(props)
+  console.log(props);
   return (
-    // <SafeAreaView style={{flex: 1}}>
     <View
       style={{
         flex: 1,
         backgroundColor: '#2c3e50',
       }}>
       <View>
-      <BooksCarousel books={props.books} onPress={()=> props.navigation.navigate('BookDetailScreen', {item: props.books})} />
+        <BooksCarousel
+          books={props.books}
+          onPress={item =>
+            props.navigation.navigate('BookDetailScreen', {item: item})
+          }
+        />
       </View>
     </View>
   );
