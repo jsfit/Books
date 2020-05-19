@@ -36,6 +36,7 @@ export default class CardComponent extends Component {
           </Text>
         </Header>
         <ImageBackground
+          resizeMode="stretch"
           source={ImageUrl}
           style={{
             width: wp(100),
@@ -46,7 +47,7 @@ export default class CardComponent extends Component {
               height: '100%',
               width: '100%',
               backgroundColor: 'black',
-              opacity: 0.5,
+              opacity: 0.3,
             }}
           />
           <View
