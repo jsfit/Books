@@ -4,7 +4,19 @@ import {getAllBooks} from '@Actions';
 import {BooksCarousel} from '@Components';
 import {StyleSheet, View} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import { Container, Header, Left, Body, Right, Button, Icon, Title, Segment, Content, Text } from 'native-base';
+import {
+  Container,
+  Header,
+  Left,
+  Body,
+  Right,
+  Button,
+  Icon,
+  Title,
+  Segment,
+  Content,
+  Text,
+} from 'native-base';
 import {hp, wp} from '@UI/percentage';
 
 const MainScreen = props => {
@@ -15,19 +27,19 @@ const MainScreen = props => {
         flex: 1,
         backgroundColor: '#2c3e50',
       }}>
-      <Header style={{ backgroundColor: '#2c3e50' }} hasSegment>
-        <Left></Left>
+      <Header style={{backgroundColor: '#2c3e50'}} hasSegment>
+        <Left />
         <Body>
-        <Text
-          style={{
-            color: 'white',
-            fontSize: wp(6),
-            marginLeft: wp(12),
-            alignSelf: "center",
-            fontWeight: 'bold',
-          }}>
-          BooksMart
-        </Text>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: wp(6),
+              marginLeft: wp(12),
+              alignSelf: 'center',
+              fontWeight: 'bold',
+            }}>
+            BooksMart
+          </Text>
         </Body>
         <Right>
           <Button transparent>
