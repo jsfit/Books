@@ -29,7 +29,7 @@ export default class CardComponent extends Component {
             style={{
               color: 'white',
               fontSize: wp(6),
-              padding: wp(2),
+              padding: wp(3),
               fontWeight: 'bold',
             }}>
             {bookDetail.author}
@@ -86,7 +86,7 @@ export default class CardComponent extends Component {
               }}>
               {'Author'}
             </Text>
-            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
+            <Text numberOfLines={5} style={{color: 'white', fontSize: wp(5), padding: wp(5), width: wp(40)}}>
               {bookDetail.author}
             </Text>
           </View>
