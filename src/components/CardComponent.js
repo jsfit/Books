@@ -83,10 +83,11 @@ export default class CardComponent extends Component {
                 color: 'white',
                 fontSize: wp(5),
                 padding: wp(6),
+                fontFamily: 'lucida grande'
               }}>
               {'Author'}
             </Text>
-            <Text numberOfLines={5} style={{color: 'white', fontSize: wp(5), padding: wp(5), width: wp(40)}}>
+            <Text numberOfLines={5} style={{color: 'white', fontSize: wp(5), padding: wp(5), width: wp(40), fontFamily: 'lucida grande'}}>
               {bookDetail.author}
             </Text>
           </View>
@@ -101,10 +102,11 @@ export default class CardComponent extends Component {
                 color: 'white',
                 fontSize: wp(5),
                 padding: wp(6),
+                fontFamily: 'lucida grande'
               }}>
               {'Total Volumes'}
             </Text>
-            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
+            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5), fontFamily: 'lucida grande'}}>
               {bookDetail.totalVolumes}
             </Text>
           </View>
@@ -119,10 +121,11 @@ export default class CardComponent extends Component {
                 color: 'white',
                 fontSize: wp(5),
                 padding: wp(6),
+                fontFamily: 'lucida grande'
               }}>
               {'Publisher'}
             </Text>
-            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
+            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5), fontFamily: 'lucida grande'}}>
               {bookDetail.publishedAt}
             </Text>
           </View>
@@ -137,10 +140,11 @@ export default class CardComponent extends Component {
                 color: 'white',
                 fontSize: wp(5),
                 padding: wp(6),
+                fontFamily: 'lucida grande'
               }}>
               {'Others'}
             </Text>
-            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5)}}>
+            <Text style={{color: 'white', fontSize: wp(5), padding: wp(5), fontFamily: 'lucida grande'}}>
               {'AnyThing'}
             </Text>
           </View>
