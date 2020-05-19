@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ImageBackground, StyleSheet, ScrollView} from 'react-native';
-import {Container, Header, Text, Button, View} from 'native-base';
+import {Container, Header, Text, Button, View, Left, Icon, Body, Title, Right} from 'native-base';
 import {hp, wp} from '@UI/percentage';
 
 export default class CardComponent extends Component {
@@ -21,10 +21,13 @@ export default class CardComponent extends Component {
         style={{
           backgroundColor: '#2c3e50',
         }}>
-        <Header
-          style={{
-            backgroundColor: '#2c3e50',
-          }}>
+        <Header style={{ backgroundColor: '#2c3e50' }} hasSegment>
+          <Left>
+            <Button transparent>
+              <Icon name="arrow-back" />
+            </Button>
+          </Left>
+          <Body>
           <Text
             style={{
               color: 'white',
@@ -34,6 +37,8 @@ export default class CardComponent extends Component {
             }}>
             {bookDetail.author}
           </Text>
+          </Body>
+          <Right></Right>
         </Header>
         <ImageBackground
           resizeMode="stretch"
